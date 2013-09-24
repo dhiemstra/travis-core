@@ -12,6 +12,7 @@ require 'active_record'
 # hooks on Github.
 class Repository < Travis::Model
   autoload :StatusImage, 'travis/model/repository/status_image'
+  autoload :Settings,    'travis/model/repository/settings'
 
   has_many :commits, dependent: :delete_all
   has_many :requests, dependent: :delete_all
