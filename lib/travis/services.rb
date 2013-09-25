@@ -17,6 +17,7 @@ module Travis
     autoload :FindRepo,            'travis/services/find_repo'
     autoload :FindRepos,           'travis/services/find_repos'
     autoload :FindRepoKey,         'travis/services/find_repo_key'
+    autoload :FindRepoSettings,    'travis/services/find_repo_settings'
     autoload :FindUserAccounts,    'travis/services/find_user_accounts'
     autoload :FindUserBroadcasts,  'travis/services/find_user_broadcasts'
     autoload :FindUserPermissions, 'travis/services/find_user_permissions'
