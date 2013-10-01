@@ -137,7 +137,7 @@ module Travis
             count ||= 0
             if times > (count += 1)
               Travis.logger.warn "[#{header}] retry #{count} because: #{e.message}"
-              Travis::Instrumentation.meter("#{self.class.name.underscore.gsub("/", ".")}.retries.#{header}")
+              Travis::Metrics.meter("#{self.class.name.underscore.gsub("/", ".")}.retries.#{header}")
               sleep count * 3 unless params[:no_sleep]
               retry
             else

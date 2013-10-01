@@ -40,7 +40,7 @@ module Travis
             parts(payload).each do |part|
               # TODO: the second argument in meter can be removed when we're sure that apps
               #       using this have newest travis-support version
-              Travis::Instrumentation.meter('travis.addons.pusher.task.messages', {})
+              Travis::Metrics.meter('travis.addons.pusher.task.messages', {})
 
               begin
                 Travis.pusher[channel].trigger(client_event, part)
